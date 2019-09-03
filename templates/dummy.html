@@ -1,0 +1,23 @@
+q<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Open Bootstrap Modal on Page Load</title>
+<body>
+
+<h1>People</h1>
+{% for plates in plate  %}
+<p>{{ plates.Fullname }}</p>
+{% endfor %}
+
+
+<h1>Upload new File</h1>
+    
+    <form method=post enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+    </form>
+    
+    
+</body>
+</html>

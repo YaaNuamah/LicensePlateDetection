@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send a message</title>
+
+    <!-- Font Icon -->
+
+    <!-- Main css -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css4/style.css') }}">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/bootstrap.min.css') }}">
+	<!-- Material Design Bootstrap -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/mdb.min.css') }}">
+	<!-- Your custom styles (optional) -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/style.css') }}">
+  
+</head>
+<body>
+
+    <div class="main">
+       
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    {% if msg %}
+                    
+                    <center><h4>{{ msg }}</h4></center>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    
+
+    <!-- JS -->
+    <script src="{{url_for('static', filename='../static/js2/jquery-3.4.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="{{url_for('static', filename='../static/js2/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url_for('static', filename='../static/js2/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script src="{{url_for('static', filename='../static/js2/mdb.min.js')}}"></script>
+  <script src="{{url_for('static', filename='../static/js/jquery.js')}}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

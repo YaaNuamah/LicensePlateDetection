@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<!--  App Title  -->
+	<title>Carpture</title>
+	<!--  App Description  -->
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/owl.transitions.css') }}">
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/owl.carousel.css') }}">
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/animate.css') }}">
+	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/main.css') }}">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/bootstrap.min.css') }}">
+	<!-- Material Design Bootstrap -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/mdb.min.css') }}">
+	<!-- Your custom styles (optional) -->
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css2/style.css') }}">
+
+
+	 
+</head>
+<body>	
+	
+	{% if string %}
+	<center>
+	<div class="alert alert-success" role="alert">
+		<h5>{{ string }}</h5>
+	</div>
+	</center>
+	{% endif %}
+	
+	 <!-- Header Section  -->
+	<!--  End Header Section  -->
+
+<!-- Start your project here-->
+  <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+	<h4 class="modal-title w-100 font-weight-bold">Upload image</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+      <form action='http://localhost:5000/message' method=post enctype=multipart/form-data>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" name='file'
+      aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type='submit' class="btn btn-default btn-rounded mb-4">Get License <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Start your project here-->
+
+	<!--  Hero Section  -->
+		<section class="hero" id="hero" style="background-position: 50% 10px%">
+		<img src= "{{url_for('static', filename='../static/img/logo.png')}}" alt="" title="Carpture">
+		<div class="container">
+			<div class="caption">
+				<h1 class="text-uppercase  animated wow fadeInLeft" >Send Instant Notifications With One Click.</h1>
+				<p class="text-uppercase  animated wow fadeInLeft"> With your phone and Carpture app, you can prompt vehicle owner of the pending situation .</p>
+
+				<a href="http://pixelhint.com/capture-free-responsive-bootstrap-app-landing-page-theme" class="app_store_btn text-uppercase animated wow fadeInLeft">
+					<i class="iphone_icon"></i>
+					<span>Upload Image</span>
+				</a>
+
+				<a href="http://pixelhint.com/capture-free-responsive-bootstrap-app-landing-page-theme" class="app_store_btn text-uppercase animated wow fadeInLeft">
+					<i class="android_icon"></i>
+					<span>Capture License</span>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!--  End Hero Section  -->
+
+
+	<!--  About Section  -->
+	<section class="about" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center animated wow fadeInLeft">
+					<div class="iphone">
+						<img src= "{{url_for('static', filename='../static/img/iphone.png')}}" alt="" title="">
+					</div>
+				</div>
+				<div class="col-md-6 animated wow fadeInRight">
+					<div class="features_list">
+						<h1 class="text-uppercase">How it Works!</h1>
+
+						<ul class="list-unstyled">
+							<li class="camera_icon">
+								<span>Take a clear picture of the vehicles' License Plate.</span>
+							</li>
+							<li class="upload_icon">
+							<span>Or Upload Image of the License Plate.</span>
+							</li>
+							<li class="eye_icon">
+								<span>Carpture checks plate number against database .</span>
+							</li>
+							<li class="dropdown">
+								<span>Select a message that best describes the situation.</span>
+							</li>
+							<li class="pic_icon">
+								<span>Message is sent to vehicle owner instantly.</span>
+							</li>
+							<li class="loc_icon">
+								<span>The vehicle owner receives message and attends to his car .</span>
+            </li>
+						</ul>
+
+						
+						<div class="text-center">
+							<a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm" >Get Started</a>
+							</div>
+
+						<!-- <a href="#hero" class="app_link">Get the app</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  End About Section  -->
+
+	<!--  Footer Section  -->
+	<footer>
+		<p class="copyright animated wow fadeIn" data-wow-duration="2s">© 2019 <a href="http://pixelhint.com" target="_blank"><strong>Carpture</strong></a>. All Rights Reserved</p>
+	</footer>
+	
+
+	<!--  End Footer Section  -->
+<script src="{{url_for('static', filename='../static/js2/jquery-3.4.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="{{url_for('static', filename='../static/js2/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url_for('static', filename='../static/js2/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script src="{{url_for('static', filename='../static/js2/mdb.min.js')}}"></script>
+  <script src="{{url_for('static', filename='../static/js/jquery.js')}}"></script>
+	
+	 <script src="{{url_for('static', filename='../static/js/ajaxchimp.js')}}"></script>
+	
+	 <script src="{{url_for('static', filename='../static/js/scrollTo.js')}}"></script>
+
+	 <script src="{{url_for('static', filename='../static/js/owl.carousel.min.js')}}"></script>
+	
+	 <script src="{{url_for('static', filename='../static/js/wow.js')}}"></script>
+	
+	 <script src="{{url_for('static', filename='../static/js/parallax.js')}}"></script>
+	 
+	 <script src="{{url_for('static', filename='../static/js/nicescroll.js')}}"></script>
+	
+	 <script src="{{url_for('static', filename='../static/js/main.js')}}"></script>
+</body>
+</html>
